@@ -11,5 +11,8 @@ namespace ColleageCourseAPI.Models
         public int Beds { get; set; }
         public float Bath { get; set; }
         public int Sqft { get; set; }
+        public int Price { get; internal set; }
+        public bool Favorite { get; internal set; }
+        public string Image { get; internal set; }
     }
 }

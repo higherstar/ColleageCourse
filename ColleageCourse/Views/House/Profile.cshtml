@@ -15,6 +15,37 @@
       $.getJSON(uri)
           .done(function (data) {
               $('#about_section').html(data.about);
+              $('#brokerage').html(data.brokerage);
+              $('#specialties').html(data.specialties);
+              $('#license').html(data.license);
+              $('#local_knowledge').html(data.localKnowledgeScore);
+              $('#process_expertise').html(data.processExpertiseScore);
+              $('#responsiveness').html(data.responsivenessScore);
+              $('#negotiation_skills').html(data.negotiationSkillsScore);
+
+              $('#listing1_price').html(data.listings[0].price);
+              $('#listing1_img').attr('src', data.listings[0].image);
+              $('#listing1_address').html(data.listings[0].address);
+              $('#listing1_beds').html(data.listings[0].beds);
+              $('#listing1_bath').html(data.listings[0].bath);
+              $('#listing1_sqft').html(data.listings[0].sqft);
+              $('#listing1_price').html(data.listings[0].price);
+
+              $('#listing2_price').html(data.listings[1].price);
+              $('#listing2_img').attr('src', data.listings[1].image);
+              $('#listing2_address').html(data.listings[1].address);
+              $('#listing2_beds').html(data.listings[1].beds);
+              $('#listing2_bath').html(data.listings[1].bath);
+              $('#listing2_sqft').html(data.listings[1].sqft);
+              $('#listing2_price').html(data.listings[1].price);
+
+              $('#listing3_price').html(data.listings[2].price);
+              $('#listing3_img').attr('src', data.listings[2].image);
+              $('#listing3_address').html(data.listings[2].address);
+              $('#listing3_beds').html(data.listings[2].beds);
+              $('#listing3_bath').html(data.listings[2].bath);
+              $('#listing3_sqft').html(data.listings[2].sqft);
+              $('#listing3_price').html(data.listings[2].price);
           });
     });
     </script>
@@ -38,28 +69,28 @@
                             <span class="c-content__agent-star c-content__agent-star--half-full"></span>
                         </div>
                         <div class="c-content__agent-info">
-                            <div class="c-content__agent-average">4.5</div>
+                            <div class="c-content__agent-average" id="local_knowledge"></div>
                             <a href="#" class="c-content__agent-review-count">16</a>
                         </div>
                     </div>
                     <div class="c-content__agent-skill-bars">
                         <div class="c-content__agent-skill-bar">
                             <div class="c-content__agent-skill-bar-title">Local knowledge</div>
-                            <div class="c-content__agent-skill-bar-average">4.5</div>
+                            <div class="c-content__agent-skill-bar-average" id="process_expertise"></div>
                             <div class="c-content__agent-skill-bar-row--default">
                                 <div class="c-content__agent-skill-bar-row" style="width:90%;"></div>
                             </div>
                         </div>
                         <div class="c-content__agent-skill-bar">
                             <div class="c-content__agent-skill-bar-title">Process expertise</div>
-                            <div class="c-content__agent-skill-bar-average">4.2</div>
+                            <div class="c-content__agent-skill-bar-average" id="responsiveness"></div>
                             <div class="c-content__agent-skill-bar-row--default">
                                 <div class="c-content__agent-skill-bar-row" style="width:84%;"></div>
                             </div>
                         </div>
                         <div class="c-content__agent-skill-bar">
                             <div class="c-content__agent-skill-bar-title">Responsiveness</div>
-                            <div class="c-content__agent-skill-bar-average">5.0</div>
+                            <div class="c-content__agent-skill-bar-average" id="negotiation_skills"></div>
                             <div class="c-content__agent-skill-bar-row--default">
                                 <div class="c-content__agent-skill-bar-row" style="width:100%;"></div>
                             </div>
@@ -77,13 +108,13 @@
                     <h4 class="l-border">About</h4>
                     <p id="about_section"></p>
                     <p class="l-small">
-                        <strong>Brokerage:</strong> Berkshire Hathaway HomeServices Elite Real Estate
+                        <strong>Brokerage:</strong> <span id="brokerage"></span>
                     </p>
                     <p class="l-small">
-                        <strong>Specialties:</strong> Property Management, Buyer’s Agent, Listing Agent…
+                        <strong>Specialties:</strong> <span id="specialties"></span>
                     </p>
                     <p class="l-small">
-                        <strong>License Number(s):</strong> #5452129
+                        <strong>License Number(s):</strong> <span id="license"></span>
                     </p>
                 </div>
             </div>
