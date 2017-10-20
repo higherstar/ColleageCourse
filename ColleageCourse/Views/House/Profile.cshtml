@@ -7,6 +7,17 @@
 }
 
 @section Scripts {
+    <script>
+    var uri = '/api/values';
+
+    $(document).ready(function () {
+      // Send an AJAX request
+      $.getJSON(uri)
+          .done(function (data) {
+              $('#about_section').html(data.about);
+          });
+    });
+    </script>
 }
 
 <div class="c-content__wrap">
@@ -64,15 +75,7 @@
                 </div>
                 <div class="c-content__agent-desc">
                     <h4 class="l-border">About</h4>
-                    <p>
-                        Being a full-service Realtor since 2007, I have been baptized by fire in a very tough housing market. I have successfully closed over 60 transactions and
-                        processed over 70 short sales both as the listing agent and some for other agents. I am very knowledgeable about lenders and their processes. I strive to
-                        exceed expectations and never forget that I am always accountable to my clients.
-                    </p>
-                    <p>
-                        My objective is to establish relationships for life, not just for the current transaction. I enjoy assisting home buyers and sellers to get moved to a
-                        better place, one that is exciting.
-                    </p>
+                    <p id="about_section"></p>
                     <p class="l-small">
                         <strong>Brokerage:</strong> Berkshire Hathaway HomeServices Elite Real Estate
                     </p>

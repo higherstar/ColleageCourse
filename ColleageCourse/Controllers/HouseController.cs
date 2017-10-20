@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ColleageCourseAPI.Models;
 
 namespace ColleageCourse.Controllers
 {
@@ -19,5 +20,6 @@ namespace ColleageCourse.Controllers
             ViewBag.Title = "Agent Profile";
             return View();
         }
+        
     }
 }
