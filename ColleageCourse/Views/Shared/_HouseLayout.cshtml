@@ -11,21 +11,14 @@
 
     <!-- Stylesheets
         ============================================= -->
-    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6744776/6682792/css/fonts.css" />
-
-    <environment names="Development">
-        <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-    </environment>
+    
 
     <link rel="stylesheet" type="text/css" href="~/css/common/normalize.css" />
     <link rel="stylesheet" type="text/css" href="~/css/common/jquery.formstyler.css" />
     <link rel="stylesheet" type="text/css" href="~/css/common/jquery.formstyler.css" />
     <link rel="stylesheet" type="text/css" href="~/css/common/style.css" />
+    
+    <link rel="stylesheet" type="text/css" href="~/css/common/fonts.css" />
     @RenderSection("Styles", required: false)
     <title>@ViewBag.Title</title>
 
